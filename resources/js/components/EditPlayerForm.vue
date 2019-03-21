@@ -1,0 +1,74 @@
+<template>
+    <div class="shadow-lg bg-white rounded-lg p-8">
+        <h1 class="text-left text-xl text-green-dark">Edit player</h1>
+
+        <form class="pt-6 pb-2 my-2">
+            <div class="mb-4">
+                <label class="block text-sm font-bold mb-2" for="firstName">
+                    First Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="firstName" type="text" placeholder="John" v-model="first_name">
+            </div>
+            <div class="mb-6">
+                <label class="block text-sm font-bold mb-2" for="lastName">
+                    Last Name
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="lastName" type="text" placeholder="Doe" v-model="last_name">
+            </div>
+            <div class="block md:flex items-center justify-between">
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="no-underline text-red-dark" @click="cancel">Cancel</a>
+                </div>
+                <div>
+                    <button :disabled="!canSubmit"
+                            class="text-white py-2 px-4 rounded"
+                            :class="{'cursor-not-allowed bg-grey': !canSubmit, 'bg-green hover:bg-green-dark': canSubmit}"
+                            @click="submit"
+                            type="button"
+                    >
+                        <div v-if="loading" class="text-grey-light">
+                            <loading></loading>
+                        </div>
+                        <span v-else>Save Player</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>
+<script>
+    export default {
+        props: ['player'],
+        data: () => ({
+            first_name: '',
+            last_name: '',
+            loading: false
+        }),
+        created() {
+            this.first_name = this.player.first_name;
+            this.last_name = this.player.last_name;
+            console.log("Created edit player form")
+        },
+        computed: {
+            canSubmit() {
+                return this.first_name.length > 0 && this.last_name.length > 0;
+            }
+        },
+        methods: {
+            cancel() {
+                this.$emit('cancel');
+            },
+            submit() {
+                this.loading = true;
+                axios.patch(`/api/players/${this.player.id}`, {'first_name': this.first_name, 'last_name': this.last_name}, { headers: { Authorization: `Bearer ${window.token}` }})
+                    .then( ({ data }) => {
+                        this.loading = false;
+                        this.$emit('submit');
+                    });
+
+            },
+
+        },
+
+    }
+</script>
