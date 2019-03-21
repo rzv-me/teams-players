@@ -5,6 +5,7 @@ import TeamDetails from "./components/TeamDetails";
 export default {
     mode: 'history',
     routes: [
+        { path: '/', redirect: '/teams' },
         {
             path: '/teams',
             name: 'teams',
@@ -13,7 +14,8 @@ export default {
         {
             path:'/teams/:id',
             component: TeamDetails,
-            props: true},
+            props: true
+        },
         {
             path: '/hello',
             name: 'hello',
