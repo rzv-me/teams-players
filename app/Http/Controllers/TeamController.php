@@ -24,7 +24,7 @@ class TeamController extends Controller
             'name' => ['required', 'max:150'],
         ]);
         $team = Team::create(request([
-            'name'
+            'name',
         ]));
         return $team;
     }

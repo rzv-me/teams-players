@@ -1,14 +1,14 @@
 <template>
-    <tr class="hover:bg-grey-lighter">
-        <td class="py-2 px-6 border-b border-grey-lighter">{{player.first_name}} {{player.last_name}}</td>
-        <td class="py-2 px-6 border-b border-grey-lighter text-right">
+    <tr class="hover:bg-gray-100">
+        <td class="py-2 px-6 border-b border-gray-200">{{player.first_name}} {{player.last_name}}</td>
+        <td class="py-2 px-6 border-b border-gray-200 text-right">
             <!--<a href="#" class="no-underline text-grey-lighter font-regular py-2 px-4 rounded text-sm bg-green hover:bg-green-dark">Edit</a>-->
-            <button type="button" @click="showModal" class="no-underline text-grey-lighter font-regular py-2 px-4 rounded text-sm bg-blue hover:bg-blue-dark">Edit</button>
+            <button type="button" @click="showModal" class="no-underline text-gray-200 font-regular py-2 px-4 rounded text-sm bg-blue-500 hover:bg-blue-700 hover:shadow-md">Edit</button>
         </td>
         <!--<portal to="modals">-->
             <transition name="fade">
-                <div v-if="editing" class="fixed pin flex items-center z-10">
-                    <div class="fixed pin bg-grey-dark opacity-75 z-20"></div>
+                <div v-if="editing" class="fixed inset-0 flex items-center z-10">
+                    <div class="fixed inset-0 bg-gray-700 opacity-75 z-20"></div>
 
                     <div class="relative mx-6 md:mx-auto w-full md:w-1/2 lg:w-1/3 z-20 m-8">
                         <edit-player-form :player="player" @cancel="hideModal" @submit="saved"></edit-player-form>

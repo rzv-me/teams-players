@@ -20,7 +20,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     </head>
-    <body class="bg-grey-lightest">
+    <body class="bg-gray-200">
         <div id="app">
             <div class="h-screen w-full flex items-center justify-center content-center">
                 <router-view></router-view>

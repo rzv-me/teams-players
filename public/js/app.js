@@ -2219,7 +2219,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -21224,7 +21223,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "shadow-lg bg-white rounded-lg p-8" }, [
-    _c("h1", { staticClass: "text-left text-xl text-green-dark" }, [
+    _c("h1", { staticClass: "text-left text-xl text-green-700" }, [
       _vm._v("Add player to " + _vm._s(_vm.team.name))
     ]),
     _vm._v(" "),
@@ -21249,7 +21248,7 @@ var render = function() {
             }
           ],
           staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker",
+            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-800",
           attrs: { id: "firstName", type: "text", placeholder: "John" },
           domProps: { value: _vm.first_name },
           on: {
@@ -21283,7 +21282,7 @@ var render = function() {
             }
           ],
           staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3",
+            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-800 mb-3",
           attrs: { id: "lastName", type: "text", placeholder: "Doe" },
           domProps: { value: _vm.last_name },
           on: {
@@ -21302,7 +21301,7 @@ var render = function() {
           _c(
             "a",
             {
-              staticClass: "no-underline text-red-dark",
+              staticClass: "no-underline text-red-700 hover:text-red-900",
               attrs: { href: "#" },
               on: { click: _vm.cancel }
             },
@@ -21316,8 +21315,8 @@ var render = function() {
             {
               staticClass: "text-white py-2 px-4 rounded",
               class: {
-                "cursor-not-allowed bg-grey": !_vm.canSubmit,
-                "bg-green hover:bg-green-dark": _vm.canSubmit
+                "cursor-not-allowed bg-gray-500": !_vm.canSubmit,
+                "bg-green-500 hover:bg-green-600": _vm.canSubmit
               },
               attrs: { disabled: !_vm.canSubmit, type: "button" },
               on: { click: _vm.submit }
@@ -21326,7 +21325,7 @@ var render = function() {
               _vm.loading
                 ? _c(
                     "div",
-                    { staticClass: "text-grey-light" },
+                    { staticClass: "text-grey-200" },
                     [_c("loading")],
                     1
                   )
@@ -21361,7 +21360,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "shadow-lg bg-white rounded-lg p-8" }, [
-    _c("h1", { staticClass: "text-left text-xl text-green-dark" }, [
+    _c("h1", { staticClass: "text-left text-xl text-green-700" }, [
       _vm._v("Edit player")
     ]),
     _vm._v(" "),
@@ -21386,7 +21385,7 @@ var render = function() {
             }
           ],
           staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker",
+            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-800",
           attrs: { id: "firstName", type: "text", placeholder: "John" },
           domProps: { value: _vm.first_name },
           on: {
@@ -21420,7 +21419,7 @@ var render = function() {
             }
           ],
           staticClass:
-            "shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3",
+            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-800 mb-3",
           attrs: { id: "lastName", type: "text", placeholder: "Doe" },
           domProps: { value: _vm.last_name },
           on: {
@@ -21439,7 +21438,7 @@ var render = function() {
           _c(
             "a",
             {
-              staticClass: "no-underline text-red-dark",
+              staticClass: "no-underline text-red-700 hover:text-red-900",
               attrs: { href: "#" },
               on: { click: _vm.cancel }
             },
@@ -21453,8 +21452,8 @@ var render = function() {
             {
               staticClass: "text-white py-2 px-4 rounded",
               class: {
-                "cursor-not-allowed bg-grey": !_vm.canSubmit,
-                "bg-green hover:bg-green-dark": _vm.canSubmit
+                "cursor-not-allowed bg-gray-500": !_vm.canSubmit,
+                "bg-green-500 hover:bg-green-700": _vm.canSubmit
               },
               attrs: { disabled: !_vm.canSubmit, type: "button" },
               on: { click: _vm.submit }
@@ -21463,7 +21462,7 @@ var render = function() {
               _vm.loading
                 ? _c(
                     "div",
-                    { staticClass: "text-grey-light" },
+                    { staticClass: "text-grey-200" },
                     [_c("loading")],
                     1
                   )
@@ -21686,8 +21685,7 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass:
-          "w-full text-center bg-grey-lighter text-grey-dark text-xs py-2"
+        staticClass: "w-full text-center bg-gray-300 text-gray-700 text-xs py-2"
       },
       [_vm._v(_vm._s(_vm.playersCountFooter))]
     )
@@ -21717,10 +21715,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "w-1/3 bg-white rounded-lg shadow-md overflow-hidden" },
+    { staticClass: "w-1/3 bg-white rounded-lg shadow-lg overflow-hidden" },
     [
       _vm.loading
-        ? _c("div", { staticClass: "text-grey-dark py-8" }, [_c("loading")], 1)
+        ? _c("div", { staticClass: "text-gray-500 py-8" }, [_c("loading")], 1)
         : _c("div", { staticClass: "p-4 flex items-center content-center" }, [
             _c(
               "div",
@@ -21729,7 +21727,7 @@ var render = function() {
                 _c(
                   "router-link",
                   {
-                    staticClass: "text-grey-light mr-4",
+                    staticClass: "text-gray-600 mr-4",
                     attrs: { to: "/teams" }
                   },
                   [
@@ -21781,7 +21779,7 @@ var render = function() {
                   "button",
                   {
                     staticClass:
-                      "rounded bg-green hover:bg-green-dark py-2 px-2 text-white font-normal",
+                      "rounded bg-green-500 hover:bg-green-600 hover:shadow-lg py-2 px-2 text-white font-normal",
                     on: { click: _vm.showModal }
                   },
                   [_vm._v("Add Player")]
@@ -21803,26 +21801,30 @@ var render = function() {
         [
           _c("transition", { attrs: { name: "fade" } }, [
             _vm.addingPlayer
-              ? _c("div", { staticClass: "fixed pin flex items-center z-10" }, [
-                  _c("div", {
-                    staticClass: "fixed pin bg-grey-dark opacity-75 z-20"
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass:
-                        "relative mx-6 md:mx-auto w-full md:w-1/2 lg:w-1/3 z-20 m-8"
-                    },
-                    [
-                      _c("add-player-form", {
-                        attrs: { team: _vm.team },
-                        on: { cancel: _vm.hideModal, submit: _vm.addedPlayer }
-                      })
-                    ],
-                    1
-                  )
-                ])
+              ? _c(
+                  "div",
+                  { staticClass: "fixed inset-0 flex items-center z-10" },
+                  [
+                    _c("div", {
+                      staticClass: "fixed inset-0 bg-gray-700 opacity-75 z-20"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "relative mx-6 md:mx-auto w-full md:w-1/2 lg:w-1/3 z-20 m-8"
+                      },
+                      [
+                        _c("add-player-form", {
+                          attrs: { team: _vm.team },
+                          on: { cancel: _vm.hideModal, submit: _vm.addedPlayer }
+                        })
+                      ],
+                      1
+                    )
+                  ]
+                )
               : _vm._e()
           ])
         ],
@@ -21859,26 +21861,19 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "bg-white rounded-lg shadow-md my-6 overflow-hidden" },
+      { staticClass: "bg-white rounded-lg shadow-lg my-6 overflow-hidden" },
       [
         _vm.loading
-          ? _c(
-              "div",
-              { staticClass: "text-grey-dark py-8" },
-              [_c("loading")],
-              1
-            )
+          ? _c("div", { staticClass: "text-gray-500 py-8" }, [_c("loading")], 1)
           : _c("div", [
               _c("table", { staticClass: "text-left w-full border-collapse" }, [
                 _c(
                   "tbody",
                   _vm._l(_vm.teams, function(team) {
-                    return _c("tr", { staticClass: "hover:bg-grey-lighter" }, [
+                    return _c("tr", { staticClass: "hover:bg-gray-100" }, [
                       _c(
                         "td",
-                        {
-                          staticClass: "py-4 px-6 border-b border-grey-lighter"
-                        },
+                        { staticClass: "py-4 px-6 border-b border-gray-200" },
                         [_vm._v(_vm._s(team.name))]
                       ),
                       _vm._v(" "),
@@ -21886,14 +21881,14 @@ var render = function() {
                         "td",
                         {
                           staticClass:
-                            "py-4 px-6 border-b border-grey-lighter text-right"
+                            "py-4 px-6 border-b border-gray-200 text-right"
                         },
                         [
                           _c(
                             "router-link",
                             {
                               staticClass:
-                                "no-underline text-grey-lighter font-regular py-2 px-4 rounded text-sm bg-blue hover:bg-blue-dark",
+                                "no-underline text-gray-200 font-regular py-2 px-4 rounded text-sm bg-blue-500 hover:bg-blue-700",
                               attrs: { to: "/teams/" + team.id }
                             },
                             [_vm._v("View")]
@@ -21911,7 +21906,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "w-full text-center bg-grey-lighter text-grey-dark text-xs py-2"
+                    "w-full text-center bg-gray-300 text-gray-700 text-xs py-2"
                 },
                 [_vm._v(_vm._s(_vm.teamsCountFooter))]
               )
@@ -21944,9 +21939,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "tr",
-    { staticClass: "hover:bg-grey-lighter" },
+    { staticClass: "hover:bg-gray-100" },
     [
-      _c("td", { staticClass: "py-2 px-6 border-b border-grey-lighter" }, [
+      _c("td", { staticClass: "py-2 px-6 border-b border-gray-200" }, [
         _vm._v(
           _vm._s(_vm.player.first_name) + " " + _vm._s(_vm.player.last_name)
         )
@@ -21954,13 +21949,13 @@ var render = function() {
       _vm._v(" "),
       _c(
         "td",
-        { staticClass: "py-2 px-6 border-b border-grey-lighter text-right" },
+        { staticClass: "py-2 px-6 border-b border-gray-200 text-right" },
         [
           _c(
             "button",
             {
               staticClass:
-                "no-underline text-grey-lighter font-regular py-2 px-4 rounded text-sm bg-blue hover:bg-blue-dark",
+                "no-underline text-gray-200 font-regular py-2 px-4 rounded text-sm bg-blue-500 hover:bg-blue-700 hover:shadow-md",
               attrs: { type: "button" },
               on: { click: _vm.showModal }
             },
@@ -21971,9 +21966,9 @@ var render = function() {
       _vm._v(" "),
       _c("transition", { attrs: { name: "fade" } }, [
         _vm.editing
-          ? _c("div", { staticClass: "fixed pin flex items-center z-10" }, [
+          ? _c("div", { staticClass: "fixed inset-0 flex items-center z-10" }, [
               _c("div", {
-                staticClass: "fixed pin bg-grey-dark opacity-75 z-20"
+                staticClass: "fixed inset-0 bg-gray-700 opacity-75 z-20"
               }),
               _vm._v(" "),
               _c(

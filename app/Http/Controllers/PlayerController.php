@@ -77,7 +77,7 @@ class PlayerController extends Controller
         ]);
         $player->update(request([
             'first_name',
-            'last_name'
+            'last_name',
         ]));
         return $player;
     }

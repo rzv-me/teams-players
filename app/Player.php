@@ -7,9 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 class Player extends Model
 {
 
+    /**
+     * @var array $fillable
+     */
     protected $fillable = ['first_name', 'last_name'];
 
-    function team()
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function team()
     {
         return $this->belongsTo(Team::class);
     }

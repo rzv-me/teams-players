@@ -5,7 +5,7 @@
                 <player v-for="player in players" :player="player" :key="player.id" @updated="updated"></player>
             </tbody>
         </table>
-        <div class="w-full text-center bg-grey-lighter text-grey-dark text-xs py-2">{{ playersCountFooter }}</div>
+        <div class="w-full text-center bg-gray-300 text-gray-700 text-xs py-2">{{ playersCountFooter }}</div>
     </div>
 </template>
 <script>

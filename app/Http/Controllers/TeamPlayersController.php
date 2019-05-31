@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Team;
-use Illuminate\Http\Request;
 
 class TeamPlayersController extends Controller
 {
@@ -15,6 +14,10 @@ class TeamPlayersController extends Controller
         return $team;
     }
 
+    /**
+     * @param $id
+     * @return mixed
+     */
     public function store($id)
     {
         $team = Team::findOrFail($id);
@@ -25,7 +28,7 @@ class TeamPlayersController extends Controller
         ]);
         $player = $team->players()->create(request([
             'first_name',
-            'last_name'
+            'last_name',
         ]));
         return $player;
     }

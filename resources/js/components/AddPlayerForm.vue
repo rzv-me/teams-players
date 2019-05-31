@@ -1,32 +1,32 @@
 <template>
     <div class="shadow-lg bg-white rounded-lg p-8">
-        <h1 class="text-left text-xl text-green-dark">Add player to {{team.name}}</h1>
+        <h1 class="text-left text-xl text-green-700">Add player to {{team.name}}</h1>
 
         <form class="pt-6 pb-2 my-2">
             <div class="mb-4">
                 <label class="block text-sm font-bold mb-2" for="firstName">
                     First Name
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="firstName" type="text" placeholder="John" v-model="first_name">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-800" id="firstName" type="text" placeholder="John" v-model="first_name">
             </div>
             <div class="mb-6">
                 <label class="block text-sm font-bold mb-2" for="lastName">
                     Last Name
                 </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-3" id="lastName" type="text" placeholder="Doe" v-model="last_name">
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-800 mb-3" id="lastName" type="text" placeholder="Doe" v-model="last_name">
             </div>
             <div class="block md:flex items-center justify-between">
                 <div class="mt-4 md:mt-0">
-                    <a href="#" class="no-underline text-red-dark" @click="cancel">Cancel</a>
+                    <a href="#" class="no-underline text-red-700 hover:text-red-900" @click="cancel">Cancel</a>
                 </div>
                 <div>
                     <button :disabled="!canSubmit"
                             class="text-white py-2 px-4 rounded"
-                            :class="{'cursor-not-allowed bg-grey': !canSubmit, 'bg-green hover:bg-green-dark': canSubmit}"
+                            :class="{'cursor-not-allowed bg-gray-500': !canSubmit, 'bg-green-500 hover:bg-green-600': canSubmit}"
                             @click="submit"
                             type="button"
                     >
-                        <div v-if="loading" class="text-grey-light">
+                        <div v-if="loading" class="text-grey-200">
                             <loading></loading>
                         </div>
                         <span v-else>Add Player</span>
